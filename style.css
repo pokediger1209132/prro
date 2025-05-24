@@ -1,0 +1,117 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center; /* Horizontally center the playerContainer */
+  align-items: flex-start; /* Align to top, not center vertically */
+  min-height: 100vh;
+  background-color: #eef2f7; /* Lighter, softer background */
+  margin: 0;
+  padding-top: 40px; /* Add some space from the top */
+}
+
+#playerContainer {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px; /* Max width for the player */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items within the container */
+}
+
+h1 {
+  color: #2c3e50; /* Darker, more modern blue-gray */
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+#controlsGroup {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background for controls area */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: calc(100% - 30px); /* Take padding into account */
+  justify-content: center; /* Center buttons and volume */
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  background-color: #3498db; /* A brighter blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  min-width: 80px; /* Consistent button width */
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+button:active {
+  background-color: #2471a3; /* Even darker on press */
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+#volumeContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* Space it from play/pause */
+}
+
+#volumeContainer label {
+  margin-right: 8px;
+  color: #555;
+}
+
+input[type="range"] {
+  width: 120px; /* Adjust width as needed */
+  cursor: pointer;
+}
+
+/* Styling for file input and nightcore toggle sections */
+.section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: calc(100% - 30px); /* Take padding into account */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section label {
+  color: #333;
+  font-weight: 500;
+}
+
+input[type="file"] {
+  border: 1px solid #ced4da;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: #fff;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Remove default margin from audio element if any */
+audio {
+  display: block; /* Can help with layout */
+  margin-bottom: 20px; /* Space below the audio element */
+  width: 100%; /* Make it take the container width */
+}
